@@ -19,5 +19,5 @@ export const italyPhotos = [{
 export const homePhotos =[{
     name: 'photo5.jpg',
     alt: "Chata w IR",
-    params: 'Yashica Electro 35 GS, Kodak Vision3 250D'
+    params: 'Minolta X-300, Volna 9 50mm F2.8, Rollei Retro 400S IR Trichrome'
 }];

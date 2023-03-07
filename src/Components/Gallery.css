@@ -2,8 +2,10 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    top: -87px;
+    top: 0;
+    left: 250px;
     z-index: 0;
+    width: calc(99% - 250px);
 }
 
 .imageBox {
@@ -13,8 +15,6 @@
     justify-content: center;
     padding: 15vh;
 }
-
-
 
 img {
     max-height: 97%;

@@ -3,8 +3,6 @@ import { homePhotos } from "../data";
 
 export default function Home() {
     return(
-        <div>
-            <Gallery imagesArray={homePhotos} catalog='home'/>
-        </div>
+        <Gallery imagesArray={homePhotos} catalog='home'/>
     )
 }

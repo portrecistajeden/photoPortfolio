@@ -1,28 +1,31 @@
 #navbar {
     display: flex;
-    justify-content: space-between;
+    flex-direction:column;
     align-items: center;
     background-color: rgba(240, 240, 240, 0.5);
-    position: sticky;
-    top: 0;
-    width: 100%;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    margin: 0;
     z-index: 3;
     box-shadow: 2px 0 5px rgba(0,0,0,0.2);
 }
 
 #navlinks {
     display: flex;
-    margin-right: 4rem;
+    width: 100%;
+    flex-direction: column;
 }
 
 li {
-    cursor: pointer;
     list-style: none;
-    margin: 2rem;
+    margin: 1rem 0 1rem 3rem;
 }
 
 .navlink {
-    display: block;
+    display: flex;
+    cursor: pointer;
     text-decoration: none;
     color: black;
     font-size: 20px;
@@ -34,6 +37,7 @@ li {
 }
 
 h2 {
-    margin-left: 2rem;
+    margin: 0 0 4rem 0;
     font-size: 36px;
+    padding: 1.5rem;
 }

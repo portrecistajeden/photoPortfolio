@@ -5,6 +5,7 @@
     left: 250px;
     width: calc(99% - 250px);
     justify-content: center;
+    scroll-behavior: smooth;
 }
 
 .gallery.grid1 {
@@ -24,24 +25,51 @@
     margin-bottom: 100px;
 }
 
-.displayButton {
+.gridIcon {
     position: fixed;
-    width: 80px;
-    height: 40px;
     left: 95%;
-    bottom: 100px;
+    bottom: 200px;
+    transform: scale(var(--ggs,3));
 }
 
+
+.gridIcon, .gridIcon::after, .gridIcon::before {
+    box-sizing: border-box;
+    display: block;
+    width: 4px;
+    height: 10px;
+    border-top: 6px double;
+    border-bottom: 2px solid;
+}
+
+.gridIcon::after, 
+.gridIcon::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+}
+
+.gridIcon::after{
+    left: -4px;
+}
+
+.gridIcon::before{
+    right: -4px;
+}
+
+
+
 .imageBox.grid1Col {
+    position: relative;
     width: 100%;
     height: 100vh;
     display:flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 15vh;
+    align-items: center;
 }
 .imageBox.grid3Col {
-    width: 100%;
-    max-height: 300px;
+    max-width: 400px;
 }
 
 .imageBox.grid3Col.a3x2 {
@@ -52,13 +80,29 @@
     grid-row-end: span 29;
 }
 
-img {
-    max-height: 97%;
+.grid1Col a {
+    max-width: 70%;
+    max-height: 80%;
+}
+
+.grid1Col img {
+    height: 100%;
+    max-height: 1500px;
+    width: 100%;
+    max-width: 1500px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+}
+
+.grid3Col img {
+    max-height: 100%;
     max-width: 100%;
     box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
 }
 
-figcaption {
+p {
+    position: absolute;
+    left: auto;
+    bottom: 1%;
     color: var(--text-color);
     text-align: right;
     font-style: italic;
@@ -67,13 +111,14 @@ figcaption {
 }
 
 
-@media screen and (max-width: 600px) {
-    .imageBox {
-        height: 50vh;
+@media screen and (max-width: 1000px) {
+    .imageBox.grid1Col {
+        height: 65vh;
         padding: 5vh;
     }
 
-    .gallery {
-        top: 0;
+    .grid1Col a {
+        max-width: 99%;
+        max-height: 95%;
     }
 }

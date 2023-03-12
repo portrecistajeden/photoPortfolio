@@ -37,7 +37,7 @@ export const italyPhotos = [{
     name:'photo8.jpg',
     alt: 'photo8',
     params: 'Yashica Electro 35 GS, Kodak Vision3 250D',
-    orientation: 'a2x3'
+    orientation: 'a3x2'
 }];
 
 export const homePhotos =[{

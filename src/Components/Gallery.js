@@ -1,35 +1,37 @@
 import './Gallery.css';
+import { ButtonGrid } from './Styles';
+import {BsFillGrid3X3GapFill, BsList } from 'react-icons/bs'
 
 export default function Gallery ({imagesArray, catalog, gridView, setGridView}) {
 
+   
 
     const images = imagesArray.map((image, index) => 
         <div  className={`imageBox ${gridView ? 'grid3Col' : 'grid1Col'} ${image.orientation}`} id={`photo${index}`}>
-            <figure>
-                {gridView ? 
-                <>
-                    <img src={require(`../Photos/${catalog}/${image.name}`)} alt={image.alt} />
-                   
-                </>
-                :
-                <>
-                    <a href={`#photo${index!==imagesArray.length-1 ? index+1 : 0}`} >
-                        <img src={require(`../Photos/${catalog}/${image.name}`)} alt={image.alt} />
-                    </a>
-                    <figcaption>{image.params}</figcaption>
-                </>
-                }
-                {/* <a href={`#photo${index!==imagesArray.length-1 ? index+1 : 0}`} >
-                    <img src={require(`../Photos/${catalog}/${image.name}`)} alt={image.alt} />
+            
+            {gridView ? 
+            <>
+                <img src={require(`../Photos/${catalog}/${image.name}`)} alt={image.alt} />            
+            </>
+            :
+            <>
+                <a href={`#photo${index!==imagesArray.length-1 ? index+1 : 0}`} >
+                    <img src={require(`../Photos/${catalog}/${image.name}`)} alt={image.alt} id={`img${index}`}/>
                 </a>
-                {!gridView ? <figcaption>{image.params}</figcaption> : null} */}
-            </figure>
+                <p>{image.params}</p>
+            </>
+            }            
         </div>
         )
     return(
         <div className={`gallery ${gridView ? 'grid3' : 'grid1'}`}>
             {images}
-            <button className='displayButton' onClick={() => setGridView(!gridView)}>Grid</button>
+            <ButtonGrid>
+                {gridView 
+                ? <BsList className='listButton' onClick={() => setGridView(false)}/>
+                : <BsFillGrid3X3GapFill className='gridButton' onClick={() => setGridView(true)} /> 
+                }                               
+            </ButtonGrid>
         </div>
     ) 
 }

@@ -25,39 +25,6 @@
     margin-bottom: 100px;
 }
 
-.gridIcon {
-    position: fixed;
-    left: 95%;
-    bottom: 200px;
-    transform: scale(var(--ggs,3));
-}
-
-
-.gridIcon, .gridIcon::after, .gridIcon::before {
-    box-sizing: border-box;
-    display: block;
-    width: 4px;
-    height: 10px;
-    border-top: 6px double;
-    border-bottom: 2px solid;
-}
-
-.gridIcon::after, 
-.gridIcon::before {
-    content: "";
-    position: absolute;
-    top: -6px;
-}
-
-.gridIcon::after{
-    left: -4px;
-}
-
-.gridIcon::before{
-    right: -4px;
-}
-
-
 
 .imageBox.grid1Col {
     position: relative;
@@ -83,6 +50,7 @@
 .grid1Col a {
     max-width: 70%;
     max-height: 80%;
+    background-color: var(--navbar-color);
 }
 
 .grid1Col img {
@@ -98,6 +66,7 @@
     max-width: 100%;
     box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
 }
+
 
 p {
     position: absolute;

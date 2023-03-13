@@ -8,4 +8,9 @@
 
 :root {
   --text-color: rgb(228, 191, 57);
+  --navbar-color: rgba(240, 240, 240, 0.5);
+}
+
+body {
+  min-width: 800px;
 }

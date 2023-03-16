@@ -21,7 +21,6 @@ export default function Gallery ({imagesArray, catalog, gridView, setGridView}) 
     }
 
     useEffect(() => {
-        console.log(photoToScrollTo)
         scrollToImage(photoToScrollTo);
     }, [photoToScrollTo])
 
@@ -30,7 +29,7 @@ export default function Gallery ({imagesArray, catalog, gridView, setGridView}) 
             
             {gridView ? 
             <>    
-                <div onClick={() => handlePhotoGridClick(`photo${index}`)}>
+                <div className='gridImageDiv' onClick={() => handlePhotoGridClick(`photo${index}`)}>
                     <img src={require(`../Photos/${catalog}/${image.name}`)} alt={image.alt} id={`photo${index}`}/>   
                 </div>            
             </>

@@ -9,6 +9,7 @@ export default function NavBar() {
             <ul id='navlinks'>
                 <li><Link className='navlink' to='/'>Home</Link></li>
                 <li><Link className='navlink' to='/italy'>Italy</Link></li>
+                <li><Link className='navlink about' to='about'>About me</Link></li>
             </ul>
         </nav>
     );

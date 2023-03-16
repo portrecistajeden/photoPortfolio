@@ -15,6 +15,12 @@ export const Button = styled.div`
       color:var(--text-color);
       transition: 0.2s;
    }
+
+   @media screen and (max-width: 800px){
+      & {
+         left: 750px;
+      }
+   }
 `
 
 export const ButtonGrid = styled.div`
@@ -31,5 +37,11 @@ export const ButtonGrid = styled.div`
    &:hover {
       color:var(--text-color);
       transition: 0.2s;
+   }
+
+   @media screen and (max-width: 800px){
+      & {
+         left: 750px;
+      }
    }
    `

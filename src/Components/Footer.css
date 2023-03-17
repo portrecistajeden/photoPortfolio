@@ -1,9 +1,19 @@
 .footerWrapper {
     text-align: center;
-    width: calc(99vw - var(--navbar-left-width));
+    width: calc(100% - 250px);
     height: 25px;
     color: var(--text-color);
-    position:relative;
+    position: relative;
     bottom: 0;
-    left: var(--navbar-left-width);
+    left: calc(var(--navbar-left-width) + 20px);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    margin-top: 25px;
+}
+
+@media screen and (max-width: 800px) {
+    .footerWrapper {
+        width: 99%;
+        margin: 0;
+        left: 0;
+    }
 }

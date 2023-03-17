@@ -3,9 +3,12 @@ import { ButtonGrid } from './Styles';
 import {BsFillGrid3X3GapFill, BsList } from 'react-icons/bs'
 import { useState, useEffect } from 'react';
 
-export default function Gallery ({imagesArray, catalog, gridView, setGridView}) {
+export default function Gallery ({imagesArray, catalog, gridView, setGridView, dimensions}) {
 
     const [photoToScrollTo, setPhototoScrollTo] = useState("");
+    const _maxListWidth = 800;
+
+    
 
     const handlePhotoGridClick = (photoID) => {
         setPhototoScrollTo(photoID);
@@ -25,26 +28,34 @@ export default function Gallery ({imagesArray, catalog, gridView, setGridView}) 
     }, [photoToScrollTo])
 
     const images = imagesArray.map((image, index) => 
-        <div  className={`imageBox ${gridView ? 'grid3Col' : 'grid1Col'} ${image.orientation}`} key={`photo${index}`} id={`photo${index}`}>
-            
-            {gridView ? 
-            <>    
-                <div className='gridImageDiv' onClick={() => handlePhotoGridClick(`photo${index}`)}>
-                    <img src={require(`../Photos/${catalog}/${image.name}`)} alt={image.alt} id={`photo${index}`}/>   
-                </div>            
-            </>
+        <div  className={`imageBox ${dimensions.width>_maxListWidth ? (gridView ? 'grid3Col' : 'grid1Col') : 'grid3Col'} ${image.orientation}`} key={`photo${index}`} id={`photo${index}`}>
+           {dimensions.width>_maxListWidth ? 
+                (gridView ? 
+                <>    
+                    <div className='gridImageDiv' onClick={() => handlePhotoGridClick(`photo${index}`)}>
+                        <img src={require(`../Photos/${catalog}/${image.name}`)} alt={image.alt} id={`photo${index}`}/>   
+                    </div>            
+                </>
+                :
+                <>
+                    <a  href={`#photo${index!==imagesArray.length-1 ? index+1 : 0}`} >
+                        <img src={require(`../Photos/${catalog}/${image.name}`)} alt={image.alt} id={`img${index}`}/>
+                    </a>
+                    <p>{image.params}</p>
+                </>
+                )
             :
-            <>
+            <>    
                 <a  href={`#photo${index!==imagesArray.length-1 ? index+1 : 0}`} >
-                    <img src={require(`../Photos/${catalog}/${image.name}`)} alt={image.alt} id={`img${index}`}/>
-                </a>
-                <p>{image.params}</p>
+                    <img src={require(`../Photos/${catalog}/${image.name}`)} alt={image.alt} id={`photo${index}`}/>   
+                </a>            
             </>
             }            
         </div>
         )
+
     return(
-        <div className={`gallery ${gridView ? 'grid3' : 'grid1'}`}>
+        <div className={`gallery ${dimensions.width>_maxListWidth ? (gridView ? 'grid3' : 'grid1') : 'grid3'}`}>
             {images}
             <ButtonGrid>
                 {gridView 

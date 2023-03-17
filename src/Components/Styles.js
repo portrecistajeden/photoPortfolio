@@ -18,7 +18,9 @@ export const Button = styled.div`
 
    @media screen and (max-width: 800px){
       & {
-         left: 750px;
+         visibility: hidden;
+         left: 50px;
+         width: 50px;
       }
    }
 `
@@ -39,9 +41,13 @@ export const ButtonGrid = styled.div`
       transition: 0.2s;
    }
 
-   @media screen and (max-width: 800px){
+   
+
+   @media screen and (max-width: 800px) {
       & {
-         left: 750px;
+         visibility: hidden;
+         left: 50px;
+         width: 50px;
       }
    }
    `

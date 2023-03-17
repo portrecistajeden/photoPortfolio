@@ -2,10 +2,10 @@ import { Outlet } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import ScrollTopButton from "./Components/ScrollTopButton.js";
 
-export default function Layout() {
+export default function Layout({dimensions}) {
     return(
         <>
-            <NavBar />
+            <NavBar dimensions={dimensions}/>
             <Outlet />
             <ScrollTopButton/>
         </>

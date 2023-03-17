@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
-export default function About() {
+export default function About(dimensions) {
     return (
         <div className='aboutWrapper'>
             <div className='aboutImageWrapper'>
@@ -16,7 +16,7 @@ export default function About() {
                 </p>
                 <ul id='contacts'>
                     <li>
-                        <a href='https://www.instagram.com/portrecistajeden/' target='_blank'>
+                        <a href='https://www.instagram.com/portrecistajeden/' target='_blank' rel="noreferrer">
                             <FontAwesomeIcon icon={faInstagram} id='icon'/> @portrecistajeden
                         </a>
                     </li>

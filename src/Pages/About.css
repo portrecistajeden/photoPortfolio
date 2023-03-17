@@ -2,7 +2,8 @@
     display: flex;
     position: relative;
     width: calc(99% - 300px);
-    height: calc(100vh - 25px);
+    height: calc(100vh - 50px);
+    min-height: 900px;
     top: 0;
     z-index: 0;
     left: 300px;
@@ -67,6 +68,7 @@
 @media screen and (max-width: 1000px){
     .aboutWrapper{
         flex-direction: column;
+        height: 1200px;
     }
 
     .textWrapper {
@@ -78,5 +80,14 @@
 @media screen and (max-width: 800px){
     .textWrapper{
         width: 400px;
+    }
+
+    .aboutWrapper {
+        position:relative;
+        width: 400px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 50px;
+        padding: 0;
     }
 }

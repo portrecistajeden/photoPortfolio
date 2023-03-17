@@ -1,9 +1,18 @@
-* {
+* {  
   box-sizing: border-box;
+}
+
+html, body {  
+  min-width: 420px;
   margin: 0;
   padding: 0;
   font-family: 'andale mono', monospace;
   scroll-behavior: smooth;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
 }
 
 :root {
@@ -12,6 +21,19 @@
   --navbar-left-width: 220px;
 }
 
+
 body {
-  min-width: 800px;
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    display: flex;
+    justify-content: center;
+    width: calc(100vw - (100vw - 100%));
+  }
+
+  #root {
+    width: calc(100vw - (100vw - 100%));
+  }
 }

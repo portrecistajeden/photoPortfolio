@@ -46,6 +46,10 @@
     grid-row-end: span 29;
 }
 
+.imageBox.grid3Col.a5x4 {
+    grid-row-end: span 52;
+}
+
 .grid1Col a {
     max-width: 70%;
     max-height: 80%;

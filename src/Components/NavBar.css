@@ -37,6 +37,11 @@
     margin: 1rem 0 ;
 }
 
+.nameLink {
+    text-decoration: none;
+    color: black;
+}
+
 .navlink {
     display: flex;
     cursor: pointer;

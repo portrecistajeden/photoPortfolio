@@ -7,7 +7,7 @@ export default function Layout({dimensions}) {
         <>
             <NavBar dimensions={dimensions}/>
             <Outlet />
-            <ScrollTopButton/>
+            <ScrollTopButton dimensions={dimensions}/>
         </>
     );
 };

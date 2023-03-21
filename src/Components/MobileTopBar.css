@@ -43,7 +43,7 @@
 }
 
 .barOpen {
-    height: 200px;
+    height: 250px;
     width: 100%;
     overflow: auto;
 }
@@ -52,6 +52,10 @@
     height: 0px;
     overflow: auto;
     width: 100%;
+}
+
+#mobileBar a {
+    margin: 0 auto;
 }
 
 #mobileBar::-webkit-scrollbar {

@@ -12,6 +12,9 @@ export default function MobileTopBar ({menuOpen, setMenuOpen, dimensions}) {
                         <li><Link onClick={() => setMenuOpen(false)} className='mobileLink colorOnHover' to='/infrared'>infrared</Link></li>
                         <li><Link onClick={() => setMenuOpen(false)} className='mobileLink colorOnHover' to='about'>About me</Link></li>
                     </ul>
+                    <a className='coffeeHover' href="https://buycoffee.to/portrecistajeden" target="_blank" rel="noreferrer">
+                        <img src="https://buycoffee.to/btn/buycoffeeto-btn-grey-outline.svg" width="150px" alt="Postaw mi kawę na buycoffee.to"/>
+                    </a>
                 </div>
             :
             <></>}

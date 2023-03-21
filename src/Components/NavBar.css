@@ -76,7 +76,7 @@
     bottom: 50px;
 }
 
-.coffee:hover {
+.coffeeHover:hover {
     filter: brightness(50%);
 }
 

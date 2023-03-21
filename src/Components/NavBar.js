@@ -15,7 +15,7 @@ export default function NavBar({handleMenuButtonClick, dimensions}) {
                 <li><Link className='navlink colorOnHover' to='/infrared'>infrared</Link></li>
                 <li><Link className='navlink colorOnHover' to='about'>About me</Link></li>
             </ul>
-            <a className='coffee' href="https://buycoffee.to/portrecistajeden" target="_blank" rel="noreferrer">
+            <a className='coffee coffeeHover' href="https://buycoffee.to/portrecistajeden" target="_blank" rel="noreferrer">
                 <img src="https://buycoffee.to/btn/buycoffeeto-btn-grey-outline.svg" width="150px" alt="Postaw mi kawę na buycoffee.to"/>
             </a>
         </nav>

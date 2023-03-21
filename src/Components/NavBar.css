@@ -6,24 +6,11 @@
     position: fixed;
     left: 0;
     width: 220px;
+    height: 100vh;
     margin: 0;
     z-index: 3;
     box-shadow: 2px 0 5px rgba(0,0,0,0.2);
     overflow: hidden;
-}
-
-.mobileClosed {
-    height: 50px;
-    transition: 0.5s ease-out;
-}
-
-.mobileOpen {
-    height: 250px;
-    transition: 0.5s ease-out;
-}
-
-.desktop {
-    height: 100vh;
 }
 
 #navlinks {
@@ -47,10 +34,9 @@
     cursor: pointer;
     text-decoration: none;
     color: black;
-    font-size: 20px;
 }
 
-.navlink:hover {
+.colorOnHover:hover {
     color: var(--text-color);
     transition: 0.3s;
 }
@@ -85,31 +71,46 @@
     transition: 0.2s;
 }
 
-#menuButton:hover {
-    color: var(--text-color);
+.coffee {
+    position: fixed;
+    bottom: 50px;
+}
+
+.coffee:hover {
+    filter: brightness(50%);
 }
 
 @media screen and (max-width: 800px) {
     #navbar {
         position: relative;
+        height: 50px;
         width: 100%;
-        box-shadow: 0 2px 2px rgba(0,0,0,0.2);
     }
 
     #nameDiv {
         flex-direction: row;
+        height: 50px;
         width: 100%;
-        margin: 3px 0;
+        padding: 3px 20px 0 20px;
     }
 
-    #menuButton {
-        visibility: visible;
-        width: auto;
-        height: auto;
-    }
-
-    #navbar h2 {
+    #nameDiv h2 {
         margin: 0;
-        padding: 0 20px;
+        padding: 0;
+    }
+
+    #navlinks {
+        height: 0px;
+        overflow: hidden;
+    }
+
+    #nameDiv span {
+        cursor: pointer;
+    }
+
+    .coffee {
+        position: relative;
+        height: 0px;
+        overflow: hidden;        
     }
 }

@@ -1,14 +1,11 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from './Layout';
-import ScrollToTop from './Components/ScrollToTop';
+import Footer from './Components/Footer';
+import Website from './Components/Website';
 import { useState, useEffect } from "react";
-import {portraitPhotos, italyPhotos, infraredPhotos} from './data';
-import Gallery from "./Components/Gallery";
-import About from "./Pages/About";
 
 export default function App() {
 
     const [gridView, setGridView] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
     const [dimensions, setDimensions] = useState({
         height: window.innerHeight,
         width: window.innerWidth
@@ -20,6 +17,9 @@ export default function App() {
                 height: window.innerHeight,
                 width: window.innerWidth
             });
+            if(dimensions.width>800 && menuOpen) {
+                setMenuOpen(false);
+            }
         } 
 
         window.addEventListener('resize', handleWindowResize);
@@ -29,17 +29,10 @@ export default function App() {
         };
     });
 
-    return (
-        <BrowserRouter>
-            <ScrollToTop/>
-                <Routes>
-                    <Route path='/' element={<Layout dimensions={dimensions}/>}>
-                    <Route index element={<Gallery imagesArray={portraitPhotos} catalog='portraits' gridView={gridView} setGridView={setGridView} dimensions={dimensions}/>}/>
-                    <Route path='italy' element={<Gallery imagesArray={italyPhotos} catalog ='italy' gridView={gridView} setGridView={setGridView} dimensions={dimensions}/>}/>
-                    <Route path='infrared' element={<Gallery imagesArray={infraredPhotos} catalog ='infrared' gridView={gridView} setGridView={setGridView} dimensions={dimensions}/>}/>
-                    <Route path='about' element={<About/>}  dimensions={dimensions}/>
-                    </Route>
-                </Routes>
-        </BrowserRouter> 
+    return(
+        <>
+            <Website gridView={gridView} setGridView={setGridView} dimensions={dimensions} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+            <Footer/> 
+        </>
     )
 }

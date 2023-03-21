@@ -1,28 +1,23 @@
 import './NavBar.css';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 
-export default function NavBar({dimensions}) {
-    
-    const [menuOpen, setMenuOpen] = useState(false);
-
-    const handleMenuClick = () => {
-        setMenuOpen(!menuOpen);
-    }
-
+export default function NavBar({handleMenuButtonClick, dimensions}) {
 
     return(
-        <nav id='navbar' className={dimensions.width<=800 ? (menuOpen ? 'mobileOpen' : 'mobileClosed') : 'desktop'}>
+        <nav id='navbar' >
             <div id='nameDiv'>
-                <h2><Link onClick={() => setMenuOpen(false)} className='nameLink' to='/'>piotr <span className='name'>awramiuk</span></Link></h2>
-                <span onClick={handleMenuClick} id='menuButton'>Menu</span>
+                <h2><Link className='nameLink' to='/'>piotr <span className='name'>awramiuk</span></Link></h2>
+                {dimensions.width<=800 ? <span className='colorOnHover' onClick={() => handleMenuButtonClick()}>menu</span> : <></>}
             </div>
             <ul id='navlinks'>
-                <li><Link onClick={() => setMenuOpen(false)} className='navlink' to='/'>portraits</Link></li>
-                <li><Link onClick={() => setMenuOpen(false)} className='navlink' to='/italy'>italy</Link></li>
-                <li><Link onClick={() => setMenuOpen(false)} className='navlink' to='/infrared'>infrared</Link></li>
-                <li><Link onClick={() => setMenuOpen(false)} className='navlink about' to='about'>About me</Link></li>
+                <li><Link className='navlink colorOnHover' to='/'>portraits</Link></li>
+                <li><Link className='navlink colorOnHover' to='/italy'>italy</Link></li>
+                <li><Link className='navlink colorOnHover' to='/infrared'>infrared</Link></li>
+                <li><Link className='navlink colorOnHover' to='about'>About me</Link></li>
             </ul>
+            <a className='coffee' href="https://buycoffee.to/portrecistajeden" target="_blank" rel="noreferrer">
+                <img src="https://buycoffee.to/btn/buycoffeeto-btn-grey-outline.svg" width="150px" alt="Postaw mi kawę na buycoffee.to"/>
+            </a>
         </nav>
     );
 }

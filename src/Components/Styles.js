@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Button = styled.div`
    position: fixed; 
    width: 100%;
-   left: 97%;
+   left: 95%;
    bottom: 120px;
    height: 10px;
    font-size: 2rem;
@@ -26,7 +26,7 @@ export const Button = styled.div`
 export const ButtonGrid = styled.div`
    position: fixed;
    width: 100%;
-   left: 97%;
+   left: 95%;
    bottom: 60px;
    height: 10px;
    font-size: 2rem;

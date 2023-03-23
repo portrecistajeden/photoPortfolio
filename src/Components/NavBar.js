@@ -6,11 +6,11 @@ export default function NavBar({handleMenuButtonClick, dimensions}) {
     return(
         <nav id='navbar' >
             <div id='nameDiv'>
-                <h2><Link className='nameLink' to='/photoPortfolio'>piotr <span className='name'>awramiuk</span></Link></h2>
+                <h2><Link className='nameLink' to='/'>piotr <span className='name'>awramiuk</span></Link></h2>
                 {dimensions.width<=800 ? <span className='colorOnHover' onClick={() => handleMenuButtonClick()}>menu</span> : <></>}
             </div>
             <ul id='navlinks'>
-                <li><Link className='navlink colorOnHover' to='/photoPortfolio'>portraits</Link></li>
+                <li><Link className='navlink colorOnHover' to='/'>portraits</Link></li>
                 <li><Link className='navlink colorOnHover' to='italy'>italy</Link></li>
                 <li><Link className='navlink colorOnHover' to='infrared'>infrared</Link></li>
                 <li><Link className='navlink colorOnHover' to='about'>About me</Link></li>

@@ -7,7 +7,7 @@ export default function MobileTopBar ({menuOpen, setMenuOpen, dimensions}) {
             {dimensions.width<=800 ?
                 <div id="mobileBar" className={menuOpen ? 'barOpen' : 'barClosed'}>
                     <ul id='mobileLinks'>
-                        <li><Link onClick={() => setMenuOpen(false)} className='mobileLink colorOnHover' to='/photoPortfolio'>portraits</Link></li>
+                        <li><Link onClick={() => setMenuOpen(false)} className='mobileLink colorOnHover' to='/'>portraits</Link></li>
                         <li><Link onClick={() => setMenuOpen(false)} className='mobileLink colorOnHover' to='italy'>italy</Link></li>
                         <li><Link onClick={() => setMenuOpen(false)} className='mobileLink colorOnHover' to='infrared'>infrared</Link></li>
                         <li><Link onClick={() => setMenuOpen(false)} className='mobileLink colorOnHover' to='about'>About me</Link></li>

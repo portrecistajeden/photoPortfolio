@@ -8,7 +8,7 @@ import About from "../Pages/About";
 export default function Website({dimensions, gridView, setGridView, menuOpen, setMenuOpen}) {   
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename='/photoPortfolio'>
             <ScrollToTop/>
                 <Routes>
                     <Route path='photoPortfolio' element={<Layout dimensions={dimensions} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>}>

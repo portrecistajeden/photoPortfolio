@@ -90,9 +90,9 @@
 .hidden {
     opacity: 0;
     filter: blur(2px);
-    transition: 0.8s;
+    transition: 1s;
     transition-property: filter, opacity, transform;
-    transform: translateX(-5%);
+    transform: translateX(-10%);
 }
 
 .show {
@@ -133,5 +133,11 @@
         opacity: 1;
         filter: blur(0);
         transform: translateX(0%);
+    }
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
     }
 }

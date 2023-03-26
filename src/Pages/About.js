@@ -30,9 +30,14 @@ export default function About({dimensions}) {
                 <img id='aboutPhoto' className={dimensions.width>800 ? 'hiddenAboutPhoto' : ''} src={require(`../Photos/about/aboutPhoto.jpg`)} alt="Piotr Awramiuk's portrait"/>
             </div>
             <div className='textWrapper'>
-                <h2>About me</h2>
+                <h2>O mnie</h2>
                 <p id='aboutMeText'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pulvinar erat at sem convallis convallis. Sed ac tellus tincidunt, laoreet urna sit amet, rhoncus turpis. Praesent justo mi, tempus eget lobortis sed, ultrices ac augue. Phasellus vitae porta leo. Quisque sed arcu id urna efficitur bibendum. Curabitur a libero pulvinar, dictum elit eu, vulputate tortor. Donec lectus enim, tempor et molestie eget, euismod vitae arcu. Ut auctor nunc est, at accumsan elit posuere vel. Nunc molestie sapien elit, non eleifend ipsum lobortis vel. Sed gravida tempus velit a rhoncus. Nunc rutrum cursus quam sed lacinia.
+                Nazywam się Piotr Awramiuk, jestem fotografem zamieszkałym w Białymstoku. 
+                <br/><br/> Moimi głównymi zainteresowaniami są portrety, łamanie ogólnieprzyjętych zasad fotografii i ciągłe eksperymentowanie z nowymi technikami. 
+                Poza własnymi projektami i sesjami wykonuję również zlecenia na sesje wizerunkowe, portretowe, biznesowe czy też na studniówki, bale, imprezy urodzinowe itd.
+                Uwielbiam zarówno sprzęt cyfrowy jak i analogowy, którego mam zdecydowanie za dużo jak na własne potrzeby. 
+                <br/>Od jakiegoś czasu interesuje mnie ukazywanie świata w podczerwieni, efekty czego możecie zobaczyć w odpowiedniej zakładce po lewej.
+                <br/><br/> Jeśli masz dla mnie zlecenie, lub chciałbyś/chciałabyś coś wspólnie stworzyć to zapraszam do kontaktu.
                 </p>
                 <ul id='contacts'>
                     <li>

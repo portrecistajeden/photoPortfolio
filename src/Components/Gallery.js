@@ -17,7 +17,7 @@ export default function Gallery ({imagesArray, catalog, gridView, setGridView, d
                 entry.target.classList.remove('show');
             }
         });
-    },{threshold: 0.5}
+    }
     );  
 
     useEffect(() =>{
@@ -76,8 +76,7 @@ export default function Gallery ({imagesArray, catalog, gridView, setGridView, d
             <ButtonGrid>
                 {gridView 
                 ? <BsList className='listButton' onClick={() => handlePhotoGridClick('photo0')}/>
-                : <BsFillGrid3X3GapFill className='gridButton' onClick={() => setGridView(true)} /> 
-                }                               
+                : <BsFillGrid3X3GapFill className='gridButton' onClick={() => setGridView(true)} />}                               
             </ButtonGrid>
         </div>
     ) 

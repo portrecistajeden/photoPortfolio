@@ -2,12 +2,32 @@ import './About.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { useEffect} from 'react';
 
-export default function About(dimensions) {
+export default function About({dimensions}) {
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if(entry.isIntersecting) {
+                entry.target.classList.add('showAboutPhoto');                
+            }
+            else {
+                entry.target.classList.remove('showAboutPhoto');
+            }
+        });
+    },{threshold: 0.5}
+    );  
+
+    useEffect(() =>{
+        const hiddenElements = document.querySelectorAll('.hiddenAboutPhoto');
+        hiddenElements.forEach((element) => {observer.observe(element)});
+    }, [dimensions.width>800])
+
+
     return (
         <div className='aboutWrapper'>
             <div className='aboutImageWrapper'>
-                <img id='aboutPhoto' src={require(`../Photos/about/aboutPhoto.jpg`)} alt="Piotr Awramiuk's portrait"/>
+                <img id='aboutPhoto' className={dimensions.width>800 ? 'hiddenAboutPhoto' : ''} src={require(`../Photos/about/aboutPhoto.jpg`)} alt="Piotr Awramiuk's portrait"/>
             </div>
             <div className='textWrapper'>
                 <h2>About me</h2>

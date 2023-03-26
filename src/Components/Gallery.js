@@ -8,6 +8,22 @@ export default function Gallery ({imagesArray, catalog, gridView, setGridView, d
     const [photoToScrollTo, setPhototoScrollTo] = useState("");
     const _maxListWidth = 800;
 
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if(entry.isIntersecting) {
+                entry.target.classList.add('show');                
+            }
+            else {
+                entry.target.classList.remove('show');
+            }
+        });
+    },{threshold: 0.5}
+    );  
+
+    useEffect(() =>{
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((element) => {observer.observe(element)});
+    }, [gridView, imagesArray])
     
 
     const handlePhotoGridClick = (photoID) => {
@@ -33,13 +49,13 @@ export default function Gallery ({imagesArray, catalog, gridView, setGridView, d
                 (gridView ? 
                 <>    
                     <div className='gridImageDiv' onClick={() => handlePhotoGridClick(`photo${index}`)}>
-                        <img src={require(`../Photos/${catalog}/${image.name}`)} alt={image.alt} id={`photo${index}`}/>   
+                        <img className='show' src={require(`../Photos/${catalog}/${image.name}`)} alt={image.alt} id={`photo${index}`}/>   
                     </div>            
                 </>
                 :
                 <>
                     <a  href={`#photo${index!==imagesArray.length-1 ? index+1 : 0}`} >
-                        <img src={require(`../Photos/${catalog}/${image.name}`)} alt={image.alt} id={`img${index}`}/>
+                        <img className='hidden' src={require(`../Photos/${catalog}/${image.name}`)} alt={image.alt} id={`img${index}`}/>
                     </a>
                     <p>{image.params}</p>
                 </>
@@ -47,7 +63,7 @@ export default function Gallery ({imagesArray, catalog, gridView, setGridView, d
             :
             <>    
                 <a  href={`#photo${index!==imagesArray.length-1 ? index+1 : 0}`} >
-                    <img src={require(`../Photos/${catalog}/${image.name}`)} alt={image.alt} id={`photo${index}`}/>   
+                    <img className='hidden' src={require(`../Photos/${catalog}/${image.name}`)} alt={image.alt} id={`photo${index}`}/>   
                 </a>            
             </>
             }            

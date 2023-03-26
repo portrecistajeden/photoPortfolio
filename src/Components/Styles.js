@@ -2,14 +2,16 @@ import styled from 'styled-components';
 
 export const Button = styled.div`
    position: fixed; 
-   width: 100%;
+   width: 40px;
    left: 95%;
-   bottom: 120px;
-   height: 10px;
+   bottom: 100px;
+   height: 40px;
    font-size: 2rem;
    z-index: 1;
    cursor: pointer;
    color: black;
+   background-color: white;
+   border-radius: 50%;
 
    &:hover {
       color:var(--text-color);
@@ -18,7 +20,7 @@ export const Button = styled.div`
 
    @media screen and (max-width: 800px){
       & {
-         left: 93%;
+         left: 90%;
       }
    }
 `
@@ -26,7 +28,7 @@ export const Button = styled.div`
 export const ButtonGrid = styled.div`
    position: fixed;
    width: 100%;
-   left: 95%;
+   left: calc(95% + 4px);
    bottom: 60px;
    height: 10px;
    font-size: 2rem;

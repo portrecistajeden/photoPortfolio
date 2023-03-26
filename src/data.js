@@ -134,7 +134,7 @@ export const portraitPhotos =[{
     name: 'portrait16.jpg',
     alt: "Chata w IR",
     params: 'Minolta X-300, Volna 9 50mm F2.8, Rollei Retro 400S IR Trichrome',
-    orientation: 'a3x2'
+    orientation: 'a5x4'
 },{
     name: 'portrait17.jpg',
     alt: "Chata w IR",

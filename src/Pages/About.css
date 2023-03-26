@@ -18,9 +18,20 @@
     margin-right: 40px;
 }
 
-.aboutWrapper img {
+#aboutPhoto {
     width: 400px;
     height: 500px;
+}
+
+.hiddenAboutPhoto {
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    transform: translateY(50%);
+}
+
+.showAboutPhoto{
+    opacity: 1;
+    transform: translateY(0%);
 }
 
 .aboutWrapper h2 {

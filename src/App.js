@@ -29,6 +29,8 @@ export default function App() {
         };
     });
 
+    
+
     return(
         <>
             <Website gridView={gridView} setGridView={setGridView} dimensions={dimensions} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>

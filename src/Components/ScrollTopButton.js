@@ -32,7 +32,9 @@ export default function ScrollTopButton({dimensions}) {
             <FaArrowUp  onClick={scrollToTop} style={{display: visible ? 'inline' : 'none',  
                                                     position: 'relative',
                                                     left: '4px',
-                                                    top: '3px'}}/>
+                                                    top: '3px',
+                                                    backgroundColor: 'white',
+                                                    borderRadius: '50%'}}/>
         </Button>
     );
 };

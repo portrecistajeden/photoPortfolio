@@ -32,12 +32,14 @@ export default function About({dimensions}) {
             <div className='textWrapper'>
                 <h2>O mnie</h2>
                 <p id='aboutMeText'>
-                Nazywam się Piotr Awramiuk, jestem fotografem zamieszkałym w Białymstoku. 
-                <br/><br/> Moimi głównymi zainteresowaniami są portrety, łamanie ogólnieprzyjętych zasad fotografii i ciągłe eksperymentowanie z nowymi technikami. 
+                Nazywam się Piotr Awramiuk, jestem fotografem działającym w Białymstoku. 
+                <br/><br/> Moimi głównymi zainteresowaniami są portrety, łamanie ogólnie przyjętych zasad fotografii i ciągłe eksperymentowanie z nowymi technikami. 
                 Poza własnymi projektami i sesjami wykonuję również zlecenia na sesje wizerunkowe, portretowe, biznesowe czy też na studniówki, bale, imprezy urodzinowe itd.
                 Uwielbiam zarówno sprzęt cyfrowy jak i analogowy, którego mam zdecydowanie za dużo jak na własne potrzeby. 
                 <br/>Od jakiegoś czasu interesuje mnie ukazywanie świata w podczerwieni, efekty czego możecie zobaczyć w odpowiedniej zakładce po lewej.
                 <br/><br/> Jeśli masz dla mnie zlecenie, lub chciałbyś/chciałabyś coś wspólnie stworzyć to zapraszam do kontaktu.
+                <br/><br/> Oferuję też wydruki moich zdjęć, jeśli jakieś ci się bardzo spodobało i chcesz mieć je na ścianie to również daj mi znać, na pewno się dogadamy.
+                <br/><br /> portra fanboy
                 </p>
                 <ul id='contacts'>
                     <li>

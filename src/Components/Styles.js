@@ -10,7 +10,6 @@ export const Button = styled.div`
    z-index: 1;
    cursor: pointer;
    color: black;
-   background-color: white;
    border-radius: 50%;
 
    &:hover {
@@ -20,7 +19,8 @@ export const Button = styled.div`
 
    @media screen and (max-width: 800px){
       & {
-         left: 90%;
+         left: 88%;
+         bottom: 30px;
       }
    }
 `

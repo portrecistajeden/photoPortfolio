@@ -7,9 +7,9 @@ export default function MobileTopBar ({menuOpen, setMenuOpen, dimensions}) {
             {dimensions.width<=800 ?
                 <div id="mobileBar" className={menuOpen ? 'barOpen' : 'barClosed'}>
                     <ul id='mobileLinks'>
-                        <li><Link onClick={() => setMenuOpen(false)} className='mobileLink colorOnHover' to='/'>portraits</Link></li>
-                        <li><Link onClick={() => setMenuOpen(false)} className='mobileLink colorOnHover' to='italy'>Puglia, Italy</Link></li>
-                        <li><Link onClick={() => setMenuOpen(false)} className='mobileLink colorOnHover' to='infrared'>infrared</Link></li>
+                        <li><Link onClick={() => setMenuOpen(false)} className='mobileLink colorOnHover' to='/'>portrety</Link></li>
+                        <li><Link onClick={() => setMenuOpen(false)} className='mobileLink colorOnHover' to='italy'>Apulia, Włochy</Link></li>
+                        <li><Link onClick={() => setMenuOpen(false)} className='mobileLink colorOnHover' to='infrared'>podczerwień</Link></li>
                         <li><Link onClick={() => setMenuOpen(false)} className='mobileLink colorOnHover' to='about'>o mnie</Link></li>
                     </ul>
                     <a className='coffeeHover' href="https://buycoffee.to/portrecistajeden" target="_blank" rel="noreferrer">

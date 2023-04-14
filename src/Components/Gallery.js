@@ -54,10 +54,18 @@ export default function Gallery ({imagesArray, catalog, gridView, setGridView, d
                 </>
                 :
                 <>
-                    <a  href={`#photo${index!==imagesArray.length-1 ? index+1 : 0}`} >
-                        <img className='hidden' src={require(`../Photos/${catalog}/${image.name}`)} alt={image.alt} id={`img${index}`}/>
-                    </a>
+                    <div id='imgBox'>
+                        <a id='anchor' href={`#photo${index!==imagesArray.length-1 ? index+1 : 0}`} >
+                            <div id='imageContainer'>
+                                <img className='hidden' src={require(`../Photos/${catalog}/${image.name}`)} alt={image.alt} id={`photo${index}`}/>
+                            </div>
+                        </a>
+                    </div>
                     <p>{image.params}</p>
+                    {/* 
+                        <img className='hidden' src={require(`../Photos/${catalog}/${image.name}`)} alt={image.alt} id={`photo${index}`}/>
+                    </a>
+                        */}
                 </>
                 )
             :

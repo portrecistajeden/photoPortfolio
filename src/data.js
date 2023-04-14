@@ -188,3 +188,85 @@ export const infraredPhotos = [{
     params: 'Revueflex 3000, Carl Zeiss Jena 35mm F2.4, Rollei Retro 400S IR',
     orientation: 'a2x3'
 }];
+
+export const bal_inz = [{
+    name: 'bal1.jpg',
+    alt:'Bal inżynierski',
+    params: 'Sony A7, Sony FE 28mm F2.0',
+    orientation: 'a2x3'
+},{
+    name: 'bal2.jpg',
+    alt:'Bal inżynierski',
+    params: 'Sony A7, Sony FE 28mm F2.0',
+    orientation: 'a2x3'
+},{
+    name: 'bal3.jpg',
+    alt:'Bal inżynierski',
+    params: 'Sony A7, Sony FE 28mm F2.0',
+    orientation: 'a2x3'
+},{
+    name: 'bal4.jpg',
+    alt:'Bal inżynierski',
+    params: 'Sony A7, Sony FE 28mm F2.0',
+    orientation: 'a2x3'
+},{
+    name: 'bal5.jpg',
+    alt:'Bal inżynierski',
+    params: 'Sony A7, Sony FE 28mm F2.0',
+    orientation: 'a2x3'
+},{
+    name: 'bal6.jpg',
+    alt:'Bal inżynierski',
+    params: 'Sony A7, Sony FE 28mm F2.0',
+    orientation: 'a2x3'
+},{
+    name: 'bal7.jpg',
+    alt:'Bal inżynierski',
+    params: 'Sony A7, Sony FE 28mm F2.0',
+    orientation: 'a2x3'
+},{
+    name: 'bal8.jpg',
+    alt:'Bal inżynierski',
+    params: 'Sony A7, Sony FE 28mm F2.0',
+    orientation: 'a2x3'
+},{
+    name: 'bal9.jpg',
+    alt:'Bal inżynierski',
+    params: 'Sony A7, Sony FE 28mm F2.0',
+    orientation: 'a2x3'
+},{
+    name: 'bal10.jpg',
+    alt:'Bal inżynierski',
+    params: 'Sony A7, Sony FE 28mm F2.0',
+    orientation: 'a2x3'
+},{
+    name: 'bal11.jpg',
+    alt:'Bal inżynierski',
+    params: 'Sony A7, Sony FE 28mm F2.0',
+    orientation: 'a2x3'
+},{
+    name: 'bal12.jpg',
+    alt:'Bal inżynierski',
+    params: 'Sony A7, Sony FE 28mm F2.0',
+    orientation: 'a2x3'
+},{
+    name: 'bal13.jpg',
+    alt:'Bal inżynierski',
+    params: 'Sony A7, Sony FE 28mm F2.0',
+    orientation: 'a3x2'
+},{
+    name: 'bal14.jpg',
+    alt:'Bal inżynierski',
+    params: 'Sony A7, Sony FE 28mm F2.0',
+    orientation: 'a2x3'
+},{
+    name: 'bal15.jpg',
+    alt:'Bal inżynierski',
+    params: 'Sony A7, Sony FE 28mm F2.0',
+    orientation: 'a2x3'
+},{
+    name: 'bal16.jpg',
+    alt:'Bal inżynierski',
+    params: 'Sony A7, Sony FE 28mm F2.0',
+    orientation: 'a2x3'
+}];

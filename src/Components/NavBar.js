@@ -13,6 +13,7 @@ export default function NavBar({handleMenuButtonClick, dimensions}) {
                 <li><Link className='navlink colorOnHover' to='/'>portrety</Link></li>
                 <li><Link className='navlink colorOnHover' to='italy'>Apulia, Włochy</Link></li>
                 <li><Link className='navlink colorOnHover' to='infrared'>podczerwień</Link></li>
+                <li><Link className='navlink colorOnHover' to='bal_inz'>imprezy okolicznościowe</Link></li>
                 <li><Link className='navlink colorOnHover' to='about'>o mnie</Link></li>
             </ul>
             <a className='coffee coffeeHover' href="https://buycoffee.to/portrecistajeden" target="_blank" rel="noreferrer">

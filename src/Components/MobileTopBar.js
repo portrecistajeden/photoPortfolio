@@ -10,6 +10,7 @@ export default function MobileTopBar ({menuOpen, setMenuOpen, dimensions}) {
                         <li><Link onClick={() => setMenuOpen(false)} className='mobileLink colorOnHover' to='/'>portrety</Link></li>
                         <li><Link onClick={() => setMenuOpen(false)} className='mobileLink colorOnHover' to='italy'>Apulia, Włochy</Link></li>
                         <li><Link onClick={() => setMenuOpen(false)} className='mobileLink colorOnHover' to='infrared'>podczerwień</Link></li>
+                        <li><Link onClick={() => setMenuOpen(false)} className='mobileLink colorOnHover' to='bal_inz'>imprezy okolicznościowe</Link></li>
                         <li><Link onClick={() => setMenuOpen(false)} className='mobileLink colorOnHover' to='about'>o mnie</Link></li>
                     </ul>
                     <a className='coffeeHover' href="https://buycoffee.to/portrecistajeden" target="_blank" rel="noreferrer">
